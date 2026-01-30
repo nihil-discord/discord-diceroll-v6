@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    /* 1. 기본 설정 */
+    "target": "ESNext",
+    "module": "NodeNext", /* ESNext보다 NodeNext가 Node.js 환경에 더 정확합니다 */
+    "moduleResolution": "NodeNext", /* bundler 대신 NodeNext 권장 */
+    "lib": [
+      "ESNext"
+    ], /* 최신 문법 지원을 위해 ESNext로 통합 */
+    "types": [
+      "node"
+    ],
+    /* 2. Robo.js 필수 설정 (가장 중요) */
+    "outDir": ".robo/build", /* dist -> .robo/build 로 변경해야 합니다 */
+    "rootDir": ".",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    /* 3. 엄격함 및 편의성 */
+    "strict": true, /* false는 위험합니다. true로 안전하게 모시겠습니다 */
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    /* 4. 데코레이터 및 기타 */
+    "declaration": true,
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "incremental": true,
+    /* 체크 완화 (마스터의 기존 설정 유지) */
+    "noUncheckedIndexedAccess": false
+  },
+  "include": [
+    "src/**/*",
+    ".robo/**/*.d.ts",
+    "eslint.config.mjs",
+    "verify_dice.ts",
+    "process.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    ".robo/build", /* 빌드 결과물 제외 */
+    "dist"
+  ]
+}
