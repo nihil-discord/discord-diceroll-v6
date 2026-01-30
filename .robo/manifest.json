@@ -10,12 +10,15 @@
           "MessageContent"
         ]
       },
+      "sage": {
+        "defer": false
+      },
       "plugins": []
     },
     "language": "typescript",
     "mode": "development",
     "type": "robo",
-    "updatedAt": "2026-01-30T10:44:49.922Z",
+    "updatedAt": "2026-01-30T18:47:23.744Z",
     "version": "0.10.32"
   },
   "api": {},
@@ -28,6 +31,33 @@
       },
       "options": [
         {
+          "name": "action",
+          "choices": [
+            {
+              "name": "주사위 굴리기",
+              "value": "roll",
+              "nameLocalizations": {
+                "ko": "주사위 굴리기"
+              }
+            },
+            {
+              "name": "설명서",
+              "value": "manual",
+              "nameLocalizations": {
+                "ko": "설명서"
+              }
+            }
+          ],
+          "description": "Roll dice or show manual",
+          "descriptionLocalizations": {
+            "ko": "주사위 굴리기 또는 설명서 보기"
+          },
+          "nameLocalizations": {
+            "ko": "동작"
+          },
+          "type": "string"
+        },
+        {
           "name": "formula",
           "description": "input dice formula (e.g., 2d6+3)",
           "descriptionLocalizations": {
@@ -36,26 +66,9 @@
           "nameLocalizations": {
             "ko": "주사위식"
           },
-          "required": true,
           "type": "string"
         }
       ]
-    },
-    "dev": {
-      "subcommands": {
-        "logs": {
-          "__path": "\\.robo\\build\\commands\\dev\\logs.js",
-          "description": "View most recent logs"
-        },
-        "status": {
-          "__path": "\\.robo\\build\\commands\\dev\\status.js",
-          "description": "View status of this Robo"
-        },
-        "restart": {
-          "__path": "\\.robo\\build\\commands\\dev\\restart.js",
-          "description": "Restart this Robo"
-        }
-      }
     },
     "fate": {
       "__path": "\\.robo\\build\\commands\\fate.js",

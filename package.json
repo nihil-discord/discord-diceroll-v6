@@ -16,6 +16,7 @@
   "packageManager": "pnpm@10.28.2",
   "devDependencies": {
     "@eslint/js": "^9.39.2",
+    "@flydotio/dockerfile": "^0.7.10",
     "@stylistic/eslint-plugin": "^5.7.1",
     "@swc/core": "^1.15.11",
     "@types/lodash": "^4.17.23",
@@ -25,7 +26,6 @@
     "eslint": "^9.39.2",
     "eslint-import-resolver-typescript": "^4.4.4",
     "eslint-plugin-import-x": "^4.16.1",
-    "robo.js": "latest",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.54.0"
@@ -35,6 +35,7 @@
     "discord.js": "^14.25.1",
     "lodash": "^4.17.23",
     "luxon": "^3.7.2",
+    "robo.js": "^0.10.32",
     "uuid": "^13.0.0"
   }
 }

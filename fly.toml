@@ -1,0 +1,19 @@
+# Discord bot – WebSocket만 사용, HTTP 서비스 없음
+# https://fly.io/docs/reference/configuration/
+
+app = 'discord-diceroll-v6'
+primary_region = 'nrt'
+
+# Graceful shutdown (Discord 연결 정리)
+kill_signal = 'SIGTERM'
+kill_timeout = 15
+
+[build]
+
+# VM: 디스코드 봇에 충분한 최소 사양
+[[vm]]
+memory = '512mb'
+cpu_kind = 'shared'
+cpus = 1
+memory_mb = 512
+processes = ['app']
