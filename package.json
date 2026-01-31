@@ -8,7 +8,8 @@
     "dev": "robo dev",
     "build": "robo build",
     "start": "robo start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "deploy": "fly deploy"
   },
   "keywords": [],
   "author": "",
