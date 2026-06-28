@@ -16,9 +16,9 @@
       "plugins": []
     },
     "language": "typescript",
-    "mode": "development",
+    "mode": "production",
     "type": "robo",
-    "updatedAt": "2026-01-30T18:47:23.744Z",
+    "updatedAt": "2026-06-28T14:43:41.504Z",
     "version": "0.10.32"
   },
   "api": {},
