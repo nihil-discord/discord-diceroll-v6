@@ -2,6 +2,8 @@ import { rollBasic } from '@nihilapp/diceroll-v3';
 import type { ChatInputCommandInteraction } from 'discord.js';
 import type { CommandConfig, CommandResult } from 'robo.js';
 
+import { createBasicRollEmbed } from '../lib/diceroll/formatters.js';
+
 export const config: CommandConfig = {
   description: 'Roll a preset dice.',
   nameLocalizations: {
@@ -72,19 +74,6 @@ export const config: CommandConfig = {
   ],
 };
 
-interface RollItem {
-  result: number;
-  isCritical: boolean;
-  isFumble: boolean;
-}
-
-function formatRollResult(roll: RollItem) {
-  let text = `${roll.result}`;
-  if (roll.isCritical) text = `**${text}** 🌟`;
-  if (roll.isFumble) text = `**${text}** 💀`;
-  return text;
-}
-
 export default (interaction: ChatInputCommandInteraction): CommandResult => {
   const diceType = interaction.options.getNumber(
     'dice',
@@ -97,31 +86,15 @@ export default (interaction: ChatInputCommandInteraction): CommandResult => {
       count,
       diceType
     );
-    const rolls = result.rolls as unknown as RollItem[];
 
     return {
       embeds: [
-        {
-          title: `D${diceType} 굴림 결과`,
-          fields: [
-            {
-              name: '총합 (Total)',
-              value: `**${result.total}**`,
-              inline: true,
-            },
-            {
-              name: '상세 결과',
-              value: `[ ${rolls.map(formatRollResult).join(', ')} ]`,
-              inline: false,
-            },
-          ],
-          color: 0x00b0f4,
-          footer: {
-            text: `굴린 사람: ${interaction.user.username} | 개수: ${count}`,
-            icon_url: interaction.user.displayAvatarURL(),
-          },
-          timestamp: new Date().toISOString(),
-        },
+        createBasicRollEmbed({
+          diceType,
+          count,
+          result,
+          user: interaction.user,
+        }),
       ],
     };
   }

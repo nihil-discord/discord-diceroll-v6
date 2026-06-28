@@ -2,6 +2,8 @@ import { rollFate } from '@nihilapp/diceroll-v3';
 import type { ChatInputCommandInteraction } from 'discord.js';
 import type { CommandConfig, CommandResult } from 'robo.js';
 
+import { createFateRollEmbed } from '../lib/diceroll/formatters.js';
+
 export const config: CommandConfig = {
   description: 'Rolls fate dice.',
   nameLocalizations: {
@@ -34,27 +36,11 @@ export default (interaction: ChatInputCommandInteraction): CommandResult => {
 
     return {
       embeds: [
-        {
-          title: '페이트 주사위 굴림 결과',
-          fields: [
-            {
-              name: '총합 (Total)',
-              value: `**${result.total}**`,
-              inline: true,
-            },
-            {
-              name: '상세 결과',
-              value: result.dice.map((roll) => roll).join(', '),
-              inline: false,
-            },
-          ],
-          color: 0xff0000,
-          footer: {
-            text: `굴린 사람: ${interaction.user.username} | 개수: ${count}`,
-            icon_url: interaction.user.displayAvatarURL(),
-          },
-          timestamp: new Date().toISOString(),
-        },
+        createFateRollEmbed({
+          count,
+          result,
+          user: interaction.user,
+        }),
       ],
     };
   }
