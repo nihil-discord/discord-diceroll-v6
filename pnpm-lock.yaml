@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@nihilapp/diceroll-v3':
-        specifier: ^3.0.4
-        version: 3.0.4
+        specifier: ^3.0.5
+        version: 3.0.5
       discord.js:
         specifier: ^14.26.4
         version: 14.26.4
@@ -179,8 +179,8 @@ packages:
   '@napi-rs/wasm-runtime@0.2.12':
     resolution: {integrity: sha512-ZVWUcfwY4E/yPitQJl481FjFo3K22D6qF0DuFH6Y/nbnE11GY5uguDxZMGXPQ8WQ0128MXQD7TnfHyK4oWoIJQ==}
 
-  '@nihilapp/diceroll-v3@3.0.4':
-    resolution: {integrity: sha512-njy3G+2N/jG2aO/hZgEm1IixWmjysttq/m9nHxpo/N6XSmCCz//WfoTYTkIaJzvYd+QLFVI8R9NfmTajQLxQ/g==}
+  '@nihilapp/diceroll-v3@3.0.5':
+    resolution: {integrity: sha512-mf7J9P+PFP+4JJzUmawcN6YeJ79gOgt8dntTEmUhLJ2LeCm1eP0NiCazJOShYly5A92D3dqtjTO10sOXlc11ZQ==}
 
   '@sapphire/async-queue@1.5.5':
     resolution: {integrity: sha512-cvGzxbba6sav2zZkH8GPf2oGk9yYoD5qrNWdu9fRehifgnFZJMV+nuy2nON2roRO4yQQ+v7MK/Pktl/HgfsUXg==}
@@ -756,9 +756,6 @@ packages:
   lodash.snakecase@4.1.1:
     resolution: {integrity: sha512-QZ1d4xoBHYUeuouhEq3lk3Uq7ldgyFXGBhg04+oRLnIz8o9T65Eh+8YdroUwn846zchkA9yDsDl5CVVaV2nqYw==}
 
-  lodash@4.17.23:
-    resolution: {integrity: sha512-LgVTMpQtIopCi79SJeDiP0TfWi5CNEc/L/aRdTh3yIvmZXTnheWpKjSZhnvMl8iXbC1tFg9gdHHDMLoV7CnG+w==}
-
   lodash@4.18.1:
     resolution: {integrity: sha512-dMInicTPVE8d1e5otfwmmjlxkZoUpiVLwyeTdUsi/Caj/gfzzblBcCE5sRHV/AsjuCmxWrte2TNGSYuCeCq+0Q==}
 
@@ -1109,7 +1106,7 @@ snapshots:
       '@tybys/wasm-util': 0.10.1
     optional: true
 
-  '@nihilapp/diceroll-v3@3.0.4':
+  '@nihilapp/diceroll-v3@3.0.5':
     dependencies:
       lodash: 4.18.1
       luxon: 3.7.2
@@ -1120,7 +1117,7 @@ snapshots:
   '@sapphire/shapeshift@4.0.0':
     dependencies:
       fast-deep-equal: 3.1.3
-      lodash: 4.17.23
+      lodash: 4.18.1
 
   '@sapphire/snowflake@3.5.3': {}
 
@@ -1646,8 +1643,6 @@ snapshots:
       p-locate: 5.0.0
 
   lodash.snakecase@4.1.1: {}
-
-  lodash@4.17.23: {}
 
   lodash@4.18.1: {}
 

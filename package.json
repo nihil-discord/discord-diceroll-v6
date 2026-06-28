@@ -1,6 +1,6 @@
 {
   "name": "dicord-diceroll-v6",
-  "version": "6.1.0",
+  "version": "6.1.1",
   "description": "",
   "main": "index.js",
   "type": "module",
@@ -29,7 +29,7 @@
     "typescript-eslint": "^8.62.0"
   },
   "dependencies": {
-    "@nihilapp/diceroll-v3": "^3.0.4",
+    "@nihilapp/diceroll-v3": "^3.0.5",
     "discord.js": "^14.26.4",
     "lodash": "^4.18.1",
     "luxon": "^3.7.2",
